@@ -3,14 +3,16 @@ export interface Project {
     id: string;
     title: string;
     subtitle: string;
-    heroImage: string;
+    heroImage?: string;
+    heroImagePublicId?: string;
     descriptionTitle: string;
     descriptionBody: string;
-    galleryImages: string[];
+    galleryImages?: string[];
     finalQuote: string;
     learnMoreDescription: string;
     learnMoreButtonColor: string;
     learnMoreButtonTextColor: string;
+    cloudinaryFolder?: string;
 }
 
 export const projects: Project[] = [
@@ -52,24 +54,30 @@ export const projects: Project[] = [
         id: 'barricade-ai',
         title: 'BARRICADE AI',
         subtitle: 'Making police reports with AI',
-        heroImage: 'https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/67b114400778c8023e8af83f_Screenshot%202025-02-15%20140704.png',
+        heroImage: 'https://res.cloudinary.com/dzmximawj/image/upload/f_auto,q_auto/v1762248477/BarricadeA1.png',
+        heroImagePublicId: 'BarricadeA1',
         descriptionTitle: 'Streamlining Law Enforcement with AI-Powered Reporting',
         descriptionBody: 'Barricade AI was developed to revolutionize the process of filing police reports. By leveraging artificial intelligence, we designed a platform that simplifies data entry, reduces administrative overhead for officers, and improves the accuracy and accessibility of incident reports for the public.',
         galleryImages: [
-            "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/67b1143f357d2145bcda69bc_Screenshot%202025-02-15%20140536.png",
-            "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/67b114400778c8023e8af83f_Screenshot%202025-02-15%20140704.png",
-            "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/67b11440e9085fb796023c2b_Screenshot%202025-02-15%20140729.png",
-            "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/67b11441cf1ec1938b4294c2_Screenshot%202025-02-15%20140821.png",
-            "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/67b11441cf1ec1938b4294d6_Screenshot%202025-02-15%20140911.png",
-            "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/67b114428526b4ba5c2cab2c_Screenshot%202025-02-15%20140944.png",
-            "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/67b11442d98df6fd29bd3464_Screenshot%202025-02-15%20140840.png",
-            "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/67b11443cf04327d71d4a635_Screenshot%202025-02-15%20141101.png",
-            "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/67b1144301903fd77fd5fb16_Screenshot%202025-02-15%20142131.png",
-            "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/67b11443ad08650c0f5f0c2e_Screenshot%202025-02-15%20142209.png"
+            'https://res.cloudinary.com/dzmximawj/image/upload/f_auto,q_auto/v1762248477/Screenshot_2025-02-15_140536_g2puqw.png',
+            'https://res.cloudinary.com/dzmximawj/image/upload/f_auto,q_auto/v1762248476/Screenshot_2025-02-15_140729_rflqxc.png',
+            'https://res.cloudinary.com/dzmximawj/image/upload/f_auto,q_auto/v1762248477/Screenshot_2025-02-15_140944_ivwywm.png',
+            'https://res.cloudinary.com/dzmximawj/image/upload/f_auto,q_auto/v1762248476/Screenshot_2025-02-15_140801_lngara.png',
+            'https://res.cloudinary.com/dzmximawj/image/upload/f_auto,q_auto/v1762248476/Screenshot_2025-02-15_140929_yv2kef.png',
+            'https://res.cloudinary.com/dzmximawj/image/upload/f_auto,q_auto/v1762248476/Screenshot_2025-02-15_140911_r5teck.png',
+            'https://res.cloudinary.com/dzmximawj/image/upload/f_auto,q_auto/v1762248477/Screenshot_2025-02-15_140840_iirzbn.png',
+            'https://res.cloudinary.com/dzmximawj/image/upload/f_auto,q_auto/v1762248477/Screenshot_2025-02-15_140821_hndilw.png',
+            'https://res.cloudinary.com/dzmximawj/image/upload/f_auto,q_auto/v1762248477/Screenshot_2025-02-15_141101_pdltrm.png',
+            'https://res.cloudinary.com/dzmximawj/image/upload/f_auto,q_auto/v1762248478/Screenshot_2025-02-15_141003_vrk2vy.png',
+            'https://res.cloudinary.com/dzmximawj/image/upload/f_auto,q_auto/v1762248478/Screenshot_2025-02-15_142302_ughpaq.png',
+            'https://res.cloudinary.com/dzmximawj/image/upload/f_auto,q_auto/v1762248478/Screenshot_2025-02-15_142318_sozam9.png',
+            'https://res.cloudinary.com/dzmximawj/image/upload/f_auto,q_auto/v1762248478/Screenshot_2025-02-15_141037_boyl8k.png',
+            'https://res.cloudinary.com/dzmximawj/image/upload/f_auto,q_auto/v1762248478/Screenshot_2025-02-15_142131_dcsu78.png'
         ],
         finalQuote: 'I am consistently re-invent industry standards pushing towards innovation using cutting-edge design and tech to deliver the best results.',
         learnMoreDescription: 'Barricade AI streamlines law enforcement operations by using artificial intelligence to simplify the process of creating and managing police reports.',
         learnMoreButtonColor: 'bg-yellow-300',
         learnMoreButtonTextColor: 'text-black',
+        cloudinaryFolder: 'pcdBarricade',
     }
 ];

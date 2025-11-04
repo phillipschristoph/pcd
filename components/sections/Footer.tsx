@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4 text-center md:text-left">
             {/* Column 1: Heading */}
             <h3 className="text-5xl md:text-6xl lg:text-8xl font-semibold whitespace-nowrap">
-                Let's Innovate
+                Let&apos;s Innovate
             </h3>
 
             {/* Column 2: Email */}

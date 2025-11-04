@@ -1,5 +1,7 @@
+'use client';
 
-import React from 'react';
+import React, { useCallback } from 'react';
+import { useRouter } from 'next/navigation';
 import HeroSection from './sections/HeroSection';
 import AiBrandsSection from './sections/AiBrandsSection';
 import AboutSection from './sections/AboutSection';
@@ -8,17 +10,25 @@ import RelationshipSection from './sections/RelationshipSection';
 import ContactSection from './sections/ContactSection';
 import Footer from './sections/Footer';
 
-interface HomePageProps {
-  navigate: (path: string) => void;
-}
+const HomePage: React.FC = () => {
+  const router = useRouter();
 
-const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
+  const navigate = useCallback(
+    (path: string) => {
+      if (!path) {
+        return;
+      }
+      router.push(path);
+    },
+    [router]
+  );
+
   return (
     <>
       <HeroSection />
       <AiBrandsSection />
       <AboutSection />
-      <WorkSection navigate={navigate} />
+      <WorkSection navigate={navigate}/>
       <RelationshipSection />
       <ContactSection />
       <Footer />

@@ -8,7 +8,7 @@ const RelationshipSection: React.FC = () => {
             <p 
                 className="max-w-3xl text-white text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.2] font-raleway"
             >
-                I don't just make pretty things, I build life long relationships.
+                I don&apos;t just make pretty things, I build life long relationships.
             </p>
         </section>
     );

@@ -1,22 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+'use client';
 
-// Tell TypeScript that window.THREE will exist
-declare global {
-  interface Window {
-    THREE: any;
-  }
-}
+import React, { useEffect, useRef } from 'react';
+import * as THREE from 'three';
 
 const ThreejsBackground: React.FC = () => {
     const mountRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        if (typeof window.THREE === 'undefined') {
-            console.error("Three.js has not been loaded. Make sure the script tag is in your HTML.");
-            return;
-        }
-
-        const THREE = window.THREE;
         const currentMount = mountRef.current;
         if (!currentMount) return;
 
@@ -39,7 +29,16 @@ const ThreejsBackground: React.FC = () => {
         
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
         const nodeCount = isMobile ? 80 : 200;
-        const nodes: any[] = [];
+        interface NodeMetadata {
+            originalPosition: THREE.Vector3;
+            pulsePhase: number;
+            driftSpeed: number;
+            driftRadius: number;
+        }
+        type NetworkNode = THREE.Mesh<THREE.SphereGeometry, THREE.MeshBasicMaterial> & {
+            userData: NodeMetadata;
+        };
+        const nodes: NetworkNode[] = [];
         const nodeSizes = [1, 1.5, 2, 2.5, 3];
         const spread = 700;
 
@@ -52,7 +51,7 @@ const ThreejsBackground: React.FC = () => {
                 transparent: true,
                 opacity: Math.random() * 0.5 + 0.3
             });
-            const node = new THREE.Mesh(sphereGeometry, sphereMaterial);
+            const node = new THREE.Mesh(sphereGeometry, sphereMaterial) as NetworkNode;
             node.position.set(
                 (Math.random() - 0.5) * spread,
                 (Math.random() - 0.5) * spread,
