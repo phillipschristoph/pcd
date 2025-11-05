@@ -26,16 +26,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onMenuToggle, navigate,
     }
   };
   
-  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    onMenuToggle();
-    if (currentPath !== '/') {
-      navigate('/');
-    } else {
-      document.querySelector('#home')?.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const handleNavigateClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
     e.preventDefault();
     onMenuToggle();
@@ -50,9 +40,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onMenuToggle, navigate,
     >
       <div className="flex flex-col items-center justify-center h-full pt-24">
         <nav className="flex flex-col items-center gap-10">
-          <a href="/" onClick={handleHomeClick} className="text-7xl lg:text-8xl font-raleway font-semibold text-[#464646] leading-[1.1] hover:text-black hover:font-bold transition-all duration-300">
-            home
-          </a>
           <a href="/work" onClick={(e) => handleNavigateClick(e, '/work')} className="text-7xl lg:text-8xl font-raleway font-semibold text-[#464646] leading-[1.1] hover:text-black hover:font-bold transition-all duration-300">
             our work
           </a>

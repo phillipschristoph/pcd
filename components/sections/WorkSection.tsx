@@ -39,7 +39,7 @@ const WorkSection: React.FC<WorkSectionProps> = ({ navigate }) => {
             <span
               className={`px-8 py-3 ${project.learnMoreButtonColor} ${project.learnMoreButtonTextColor} rounded-md font-semibold`}
             >
-              LEARN MORE
+              SEE CASE STUDY
             </span>
           </div>
           <div className="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/70 to-transparent w-full">

@@ -34,6 +34,15 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projectId }) => {
 
   const otherProjects = projects.filter((p) => p.id !== projectId);
   const galleryImages = project.galleryImages ?? [];
+  const galleryWidthClass = (() => {
+    if (project.id === 'barricade-ai') {
+      return 'mx-auto w-full md:w-[55%] lg:w-[50%]';
+    }
+    if (project.id === 'google-fiber') {
+      return 'mx-auto w-full md:w-[85%] lg:w-[80%]';
+    }
+    return undefined;
+  })();
 
   return (
     <div className="px-[2.5vw] py-[2.5vw] pb-10 text-white">
@@ -74,7 +83,10 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projectId }) => {
 
         <div className="px-6 md:px-12 lg:px-16 space-y-8">
           {galleryImages.map((src, index) => (
-            <section key={index}>
+            <section
+              key={index}
+              className={galleryWidthClass}
+            >
               <Image
                 src={src}
                 alt={`${project.title} showcase ${index + 1}`}
