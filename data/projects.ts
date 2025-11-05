@@ -24,7 +24,8 @@ export const projects: Project[] = [
         descriptionTitle: 'Revolutionizing the Fashion World with AI',
         descriptionBody: 'Devavonne AI pioneers the integration of artificial intelligence in the fashion industry, creating personalized and predictive style experiences. We partnered with them to build a brand and digital presence that reflects their cutting-edge technology.',
         galleryImages: [
-            "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/66052cc2d5339cffb2142409_Devavonne_Edgy_2048.webp",
+            "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/674fb07fefd10dd2fb75e1e5_Devavone_Lowkey%20Image%205-gigapixel-R1-hq-width-7680px.webp",
+            "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/6623111be8288ee06538ea5a_HERO-clean.webp",
         ],
         finalQuote: 'A project focused on blending high-fashion aesthetics with high-tech functionality, setting a new standard for digital fashion platforms.',
         learnMoreDescription: 'Devavonne AI pioneers the integration of artificial intelligence in the fashion industry, creating personalized and predictive style experiences.',
@@ -79,5 +80,24 @@ export const projects: Project[] = [
         learnMoreButtonColor: 'bg-yellow-300',
         learnMoreButtonTextColor: 'text-black',
         cloudinaryFolder: 'pcdBarricade',
-    }
+    },
+    {
+        id: 'omni-think',
+        title: 'Omni Think',
+        subtitle: 'Delivering the worlds fastest internet to millions',
+        heroImage: 'https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/67b11b5a5aa2c7918f7fcb73_Screenshot%202025-02-15%20145217.png',
+        descriptionTitle: 'Delivering The Fastest Internet in the World',
+        descriptionBody: "Tasked by Google Fiber, I had an opportunity to illustrate the necessity and versatility of the world's fastest Internet for users worldwide. Opting to spotlight its profound impact on daily experiences, I set out to showcase the device's transformative capabilities.",
+        galleryImages: [
+            "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/67b11b5a5aa2c7918f7fcb73_Screenshot%202025-02-15%20145217.png",
+            "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/66054ef5614bc94bdbf5f88e_Fiber5.webp",
+            "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/66054ef4496490cee58cb36b_Fiber3.webp",
+            "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/66054ef47109e4b4757b459d_Fiber4.webp",
+            "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/66054ef48df3e25ab81d5e29_Fiber11.webp"
+        ],
+        finalQuote: 'I am consistently re-invent industry standards pushing towards innovation using cutting-edge design and tech to deliver the best results.',
+        learnMoreDescription: "Google Fiber starts with a connection that is up to 100 times faster than today's average broadband speeds. Instant downloads. Crystal clear high definition TV. And endless possibilities.",
+        learnMoreButtonColor: 'bg-blue-600',
+        learnMoreButtonTextColor: 'text-white',
+    },
 ];

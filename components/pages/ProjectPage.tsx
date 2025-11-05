@@ -46,8 +46,8 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projectId }) => {
 
   return (
     <div className="px-[2.5vw] py-[2.5vw] pb-10 text-white">
-      <div className="mx-4 md:mx-8 lg:mx-16 border border-gray-700/50 rounded-2xl overflow-hidden shadow-2xl bg-[#181818]">
-        <section className="relative h-[70vh] flex items-center justify-center text-center">
+      <div className=" border border-gray-700/50 rounded-2xl overflow-hidden shadow-2xl bg-[#181818]">
+        <section className="relative h-[100vh] flex flex-col items-center justify-center gap-8 text-center">
           {project.heroImage ? (
             <Image
               src={project.heroImage}
@@ -55,12 +55,11 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projectId }) => {
               fill
               priority
               sizes="100vw"
-              className="object-cover"
+              className="object-cover object-[center_25%]"
             />
           ) : (
             <div className="absolute inset-0 flex items-center justify-center bg-neutral-900">
               <span className="text-sm uppercase tracking-[0.3em] text-gray-400">
-                Image unavailable
               </span>
             </div>
           )}
@@ -68,6 +67,16 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projectId }) => {
           <h1 className="relative text-7xl md:text-9xl lg:text-[10rem] font-black uppercase z-10 px-4">
             {project.title}
           </h1>
+          {project.id === 'devavonne-ai' && (
+            <Link
+              href="https://devavonne.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative z-10 inline-flex items-center justify-center rounded-full border border-white/80 bg-black/60 px-16 py-6 text-mdon font-semibold uppercase tracking-[0.4em] text-white transition hover:bg-black/80 hover:scale-[1.02]"
+            >
+              See Live Site
+            </Link>
+          )}
         </section>
 
         <section className="py-32 md:py-48 lg:py-56 px-6 md:px-12 lg:px-16">

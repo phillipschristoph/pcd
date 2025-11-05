@@ -1285,15 +1285,14 @@ video {
 .z-10 {
   z-index: 10;
 }
+.z-20 {
+  z-index: 20;
+}
 .z-40 {
   z-index: 40;
 }
 .z-50 {
   z-index: 50;
-}
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 .mx-auto {
   margin-left: auto;
@@ -1305,26 +1304,26 @@ video {
 .mb-2 {
   margin-bottom: 0.5rem;
 }
-.mb-40 {
-  margin-bottom: 10rem;
-}
 .mb-6 {
   margin-bottom: 1.5rem;
 }
 .mb-8 {
   margin-bottom: 2rem;
 }
-.mt-8 {
-  margin-top: 2rem;
-}
 .mt-10 {
   margin-top: 2.5rem;
+}
+.mt-8 {
+  margin-top: 2rem;
 }
 .block {
   display: block;
 }
 .flex {
   display: flex;
+}
+.inline-flex {
+  display: inline-flex;
 }
 .grid {
   display: grid;
@@ -1353,6 +1352,9 @@ video {
 .h-\[70vh\] {
   height: 70vh;
 }
+.h-\[95vh\] {
+  height: 95vh;
+}
 .h-auto {
   height: auto;
 }
@@ -1360,6 +1362,9 @@ video {
   height: 100%;
 }
 .h-screen {
+  height: 100vh;
+}
+.h-\[100vh\] {
   height: 100vh;
 }
 .min-h-\[90vh\] {
@@ -1510,6 +1515,9 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
+.border-white\/80 {
+  border-color: rgb(255 255 255 / 0.8);
+}
 .bg-\[\#181818\] {
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 24 / var(--tw-bg-opacity, 1));
@@ -1533,6 +1541,9 @@ video {
 }
 .bg-black\/50 {
   background-color: rgb(0 0 0 / 0.5);
+}
+.bg-black\/60 {
+  background-color: rgb(0 0 0 / 0.6);
 }
 .bg-blue-600 {
   --tw-bg-opacity: 1;
@@ -1573,6 +1584,34 @@ video {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.object-scale-down {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.object-\[center_25\%\] {
+  -o-object-position: center 25%;
+     object-position: center 25%;
+}
+.object-bottom {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+.object-top {
+  -o-object-position: top;
+     object-position: top;
+}
+.object-\[center_80\%\] {
+  -o-object-position: center 80%;
+     object-position: center 80%;
+}
+.object-\[center_75\%\] {
+  -o-object-position: center 75%;
+     object-position: center 75%;
+}
+.object-\[center_50\%\] {
+  -o-object-position: center 50%;
+     object-position: center 50%;
+}
 .p-10 {
   padding: 2.5rem;
 }
@@ -1585,6 +1624,10 @@ video {
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
+}
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -1637,6 +1680,14 @@ video {
 .py-\[2\.5vw\] {
   padding-top: 2.5vw;
   padding-bottom: 2.5vw;
+}
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .pb-10 {
   padding-bottom: 2.5rem;
@@ -1737,6 +1788,9 @@ video {
 }
 .tracking-\[0\.3em\] {
   letter-spacing: 0.3em;
+}
+.tracking-\[0\.4em\] {
+  letter-spacing: 0.4em;
 }
 .tracking-\[1px\] {
   letter-spacing: 1px;
@@ -1897,6 +1951,16 @@ body {
   animation: fadeIn 0.8s ease-out forwards;
 }
 
+.hover\:scale-\[1\.02\]:hover {
+  --tw-scale-x: 1.02;
+  --tw-scale-y: 1.02;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:bg-black\/80:hover {
+  background-color: rgb(0 0 0 / 0.8);
+}
+
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
@@ -1962,15 +2026,6 @@ body {
 }
 
 @media (min-width: 768px) {
-
-  .md\:mx-8 {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-
-  .md\:mb-60 {
-    margin-bottom: 15rem;
-  }
 
   .md\:mb-40 {
     margin-bottom: 10rem;
@@ -2082,15 +2137,6 @@ body {
 }
 
 @media (min-width: 1024px) {
-
-  .lg\:mx-16 {
-    margin-left: 4rem;
-    margin-right: 4rem;
-  }
-
-  .lg\:mb-72 {
-    margin-bottom: 18rem;
-  }
 
   .lg\:mb-60 {
     margin-bottom: 15rem;

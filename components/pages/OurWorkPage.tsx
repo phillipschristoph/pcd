@@ -37,7 +37,7 @@ const OurWorkPage: React.FC = () => {
                   alt={project.title}
                   fill
                   sizes="(min-width: 1024px) 1024px, 100vw"
-                  className="object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover object-[center_25%] transform group-hover:scale-105 transition-transform duration-500"
                   priority={project.id === 'barricade-ai'}
                 />
               ) : (
