@@ -47,6 +47,9 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projectId }) => {
     if (project.id === 'robo-pac') {
       return 'mx-auto w-full md:w-[65%] lg:w-[60%]';
     }
+    if (project.id === 'devavonne-ai') {
+      return 'mx-auto w-full md:w-[65%] lg:w-[60%]';
+    }
     return undefined;
   })();
 
@@ -73,16 +76,26 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projectId }) => {
           <h1 className="relative text-7xl md:text-9xl lg:text-[10rem] font-black uppercase z-10 px-4">
             {project.title}
           </h1>
-          {project.id === 'devavonne-ai' && (
-            <Link
-              href="https://devavonne.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative z-10 inline-flex items-center justify-center rounded-full border border-white/80 bg-black/60 px-16 py-6 text-mdon font-semibold uppercase tracking-[0.4em] text-white transition hover:bg-black/80 hover:scale-[1.02]"
-            >
-              See Live Site
-            </Link>
-          )}
+          {(() => {
+            const liveSiteMap: Record<string, string> = {
+              'devavonne-ai': 'https://devavonne.com',
+              'report-right': 'https://reportright.vercel.app/',
+            };
+            const liveSiteHref = liveSiteMap[project.id];
+            if (!liveSiteHref) {
+              return null;
+            }
+            return (
+              <Link
+                href={liveSiteHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative z-10 inline-flex items-center justify-center rounded-full border border-white/80 bg-black/60 px-16 py-6 text-mdon font-semibold uppercase tracking-[0.4em] text-white transition hover:bg-black/80 hover:scale-[1.02]"
+              >
+                See Live Site
+              </Link>
+            );
+          })()}
         </section>
 
         <section className="py-32 md:py-48 lg:py-56 px-6 md:px-12 lg:px-16">

@@ -26,6 +26,7 @@ export const projects: Project[] = [
         galleryImages: [
             "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/674fb07fefd10dd2fb75e1e5_Devavone_Lowkey%20Image%205-gigapixel-R1-hq-width-7680px.webp",
             "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/6623111be8288ee06538ea5a_HERO-clean.webp",
+            "https://res.cloudinary.com/dzmximawj/image/upload/v1762333111/Artboard_295_copy_4x_xvf9j4.png",
         ],
         finalQuote: 'A project focused on blending high-fashion aesthetics with high-tech functionality, setting a new standard for digital fashion platforms.',
         learnMoreDescription: 'Devavonne AI pioneers the integration of artificial intelligence in the fashion industry, creating personalized and predictive style experiences.',
@@ -118,6 +119,24 @@ export const projects: Project[] = [
             "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/662307dd50792a11555c6859_Main%20Desktop%20LIGHT%20HERO%20A7.webp",
             "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/662307dcacf4936897a96c08_Main%20Desktop%20LIGHT%20HERO%20A10.webp",
             "https://cdn.prod.website-files.com/65dfcc50263944170d94aa61/662307dcbddd1c6770fe2fa3_Main%20Desktop%20LIGHT%20HERO%20A11.webp",
+        ],
+        finalQuote: 'I am constantly re-inventing industry standards pushing towards innovation using cutting-edge design and tech to deliver the best results.',
+        learnMoreDescription: "Showcasing the power of AI in ecommerce, we push the boundaries of innovation to create products that stay ahead of the market.",
+        learnMoreButtonColor: 'bg-yellow-300',
+        learnMoreButtonTextColor: 'text-black',
+    },
+
+    
+    {
+        id: 'report-right',
+        title: 'Report Right',
+        subtitle: '',
+        heroImage: 'https://res.cloudinary.com/dzmximawj/image/upload/v1762375088/Screenshot_2025-11-05_122237_zx2dry.png',
+        descriptionTitle: 'Improving Reporting for accountants',
+        descriptionBody: "Tasked with both the design and development of Report Right & Flowright, I was tasked with creating a modern, visually appealing, and user-friendly platform that simplifies the process of creating and managing financial reports.",
+        galleryImages: [
+            "https://res.cloudinary.com/dzmximawj/image/upload/v1762375088/Screenshot_2025-11-05_122237_zx2dry.png",
+   
         ],
         finalQuote: 'I am constantly re-inventing industry standards pushing towards innovation using cutting-edge design and tech to deliver the best results.',
         learnMoreDescription: "Showcasing the power of AI in ecommerce, we push the boundaries of innovation to create products that stay ahead of the market.",
