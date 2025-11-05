@@ -36,10 +36,16 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ projectId }) => {
   const galleryImages = project.galleryImages ?? [];
   const galleryWidthClass = (() => {
     if (project.id === 'barricade-ai') {
-      return 'mx-auto w-full md:w-[55%] lg:w-[50%]';
+      return 'mx-auto w-full md:w-[65%] lg:w-[60%]';
     }
     if (project.id === 'google-fiber') {
-      return 'mx-auto w-full md:w-[85%] lg:w-[80%]';
+      return 'mx-auto w-full md:w-[65%] lg:w-[60%]';
+    }
+    if (project.id === 'omni-think') {
+      return 'mx-auto w-full md:w-[65%] lg:w-[60%]';
+    }
+    if (project.id === 'robo-pac') {
+      return 'mx-auto w-full md:w-[65%] lg:w-[60%]';
     }
     return undefined;
   })();

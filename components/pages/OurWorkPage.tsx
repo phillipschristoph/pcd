@@ -54,7 +54,7 @@ const OurWorkPage: React.FC = () => {
                 <span
                   className={`px-8 py-3 ${project.learnMoreButtonColor} ${project.learnMoreButtonTextColor} rounded-md font-semibold`}
                 >
-                  LEARN MORE
+                  SEE WORK
                 </span>
               </div>
               <div className="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/70 to-transparent w-full">
